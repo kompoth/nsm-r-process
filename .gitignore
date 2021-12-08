@@ -1,0 +1,6 @@
+history.*
+run
+test
+*.txt
+results/*
+rates/*
