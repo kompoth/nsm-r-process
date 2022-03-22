@@ -10,10 +10,13 @@ LDLIBS := -L${MKLPATH} -lmkl_core -lmkl_sequential -lmkl_intel_lp64\
 -lboost_system -lboost_filesystem -lboost_serialization -lblas -lgslcblas \
 -llapack -fopenmp -lcairomm-1.0
 
-all: simulation
+all: bsm simple
 
-simulation: r-process.cpp 
+bsm: src/r-process.cpp 
+	$(CXX) $(CXXFLAGS) $(INCLUDE) $(LDLIBS) $^ -o $@ 
+
+simple: src/r-canonical.cpp
 	$(CXX) $(CXXFLAGS) $(INCLUDE) $(LDLIBS) $^ -o $@ 
 
 clean:
-	rm -f simulation
+	rm -f bsm simple history.* final_abundance.txt 

@@ -1,6 +1,5 @@
 history.*
-run
-test
-*.txt
-results/*
-rates/*
+final_abundance.txt
+simulation
+*.png
+*.pdf
