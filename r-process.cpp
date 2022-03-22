@@ -57,10 +57,10 @@ main(int argc, char *argv[]) {
   ReactionLibs reactionLibraries{&strongReactionLibrary, &symmetricFission, &spontaneousFission, &weakReactionLibrary};
   ReactionNetwork net(nuclib, reactionLibraries, &helm, &screen, opts);
   
-  double Ye = 0.03;
-  double rho0 = 9.58e+9;
-  double tau = 13e-3;
-  double T0 = 0.925; 
+  double Ye = 0.1;
+  //double rho0 = 9.58e+9;
+  double tau = 0.01;
+  double T0 = 6.; 
 
   // run NSE with the temperature and entropy to find the initial density
   NSEOptions nse_opts;
