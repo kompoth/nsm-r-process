@@ -1,0 +1,11 @@
+#!/bin/bash
+
+MODELS="hfb24_old frdm2012_old lmr2021_old"
+
+for m in $MODELS; do
+  REACLIB=reaclib/reaclib_$m.dat
+  RESULTS=results/simple_$m/
+  ./simple -s $REACLIB -w $REACLIB
+  [ -d $RESULTS ] || mkdir $RESULTS
+  mv 'history.log' 'history.h5' final_abundance.txt $RESULTS
+done

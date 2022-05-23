@@ -7,8 +7,9 @@ set style line 5 lw 8 dt 3 lc "gray50"
 set pointsize 2
 
 #set term pdfcairo size 24,12 font ',64'
-set term pngcairo
-set output "distr.png"
+#set term pngcairo
+#set output "distr.png"
+set term x11
 set border 3
 set tics nomirror
 set format y "10^{%L}"
@@ -19,7 +20,7 @@ set xtics 20
 set key left top
 
 #set yrange [1e-12:]
-plot [60:220] 'hfb24/final_abundance.txt' w l t "HFB-24", \
-              'frdm2012/final_abundance.txt' w l t "FRDM2012", \
-              'lmr2021/final_abundance.txt' w l t "LMR2021" 
+plot [60:220] 'bsm_hfb24/final_abundance.txt' w l t "HFB-24", \
+              'bsm_frdm2012/final_abundance.txt' w l t "FRDM2012", \
+              'bsm_lmr2021/final_abundance.txt' w l t "LMR2021" 
 

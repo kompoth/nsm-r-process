@@ -1,5 +1,5 @@
-history.*
-final_abundance.txt
-simulation
+*.h5
+nsm
+simple
 *.png
 *.pdf

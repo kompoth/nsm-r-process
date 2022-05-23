@@ -1,0 +1,143 @@
+#
+#                                      ##
+#                                    ######
+#                                  ###    ###
+#                                ###   ##   ###
+#                              ###    ####    ###
+#                            ####      ##      ####
+#                          ###  ###          ###  ###
+#                        ###      ###      ###      ###
+#                      ###          ###  ###          ###
+#                    ###              ####              ###
+#                  ###___  _           ##   _  _       _  ###
+#                ### / __|| |__ _  _   ##  | \| | ___ | |_  ###
+#              ###   \__ \| / /| || |  ##  | .` |/ -_)|  _|   ###
+#            ###     |___/|_\_\ \_, |  ##  |_|\_|\___| \__|     ###
+#          ###                  |__/   ##                         ###
+#        ##############################################################
+#
+#
+# SkyNet Nuclear Reaction Network
+# Copyright (c) 2014 - 2017, California Institute of Technology
+# Written by Jonas Lippuner and Luke Roberts
+# All rights reserved
+#
+# SkyNet is free software available at https://bitbucket.org/jlippuner/skynet
+# See the LICENSE file in the source code for conditions. There is NO warranty;
+# not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+#
+# Git revision: WORKING DIRECTORY DIRTY
+# There are unstaged changes, uncommitted changes, or untracked files,
+# thus the current Git revision (49ff6c91d58d7bcc97143b649329ed186b0958ae)
+# is not very meaningful.
+#
+# Built on 2022-03-19 at 12:10:35 AM with mkl
+# SkyNetRoot: /usr/local/
+#
+# Network contains 7836 nuclides and 94697 reactions (15430 weak, 79267 strong, 0 inverse)
+#
+# Nuclide Library
+#   Source: /usr/local//data/webnucleo_nuc_v2.0.xml
+#   Number of nuclides: 7836
+#
+# REACLIB Reaction Library
+#   Reaction type: Strong
+#   Description: Strong reactions
+#   Source: /home/vasily/skynet-2021-02-27/r-process/reaclib/reaclib_hfb24_old.dat
+#   Screening: yes
+#   Forward reactions: 65906
+#   Inverse reactions: 0
+#   Inverse rates from detailed balance: no
+#   Freeze rates at min T9: yes (at T9 = 0.010000)
+#
+# REACLIB Reaction Library
+#   Reaction type: Strong
+#   Description: Symmetric neutron induced fission with 0 free neutrons
+#   Source: /usr/local/data/netsu_panov_symmetric_0neut
+#   Screening: no
+#   Forward reactions: 3324
+#   Inverse reactions: 0
+#   Inverse rates from detailed balance: no
+#   Freeze rates at min T9: yes (at T9 = 0.010000)
+#
+# REACLIB Reaction Library
+#   Reaction type: Strong
+#   Description: Spontaneous fission
+#   Source: /usr/local/data/netsu_sfis_Roberts2010rates
+#   Screening: no
+#   Forward reactions: 10037
+#   Inverse reactions: 0
+#   Inverse rates from detailed balance: no
+#   Freeze rates at min T9: yes (at T9 = 0.010000)
+#
+# REACLIB Reaction Library
+#   Reaction type: Weak
+#   Description: Weak reactions
+#   Source: /home/vasily/skynet-2021-02-27/r-process/reaclib/reaclib_hfb24_old.dat
+#   Screening: yes
+#   Forward reactions: 15430
+#   Inverse reactions: 0
+#   Inverse rates from detailed balance: no
+#   Freeze rates at min T9: yes (at T9 = 0.010000)
+#
+# EOS: Default SkyNet EOS (modified Timmes)
+#   Source: /usr/local//data/helm_table.dat
+#
+# Screening: Default SkyNet screening
+#
+# Neutrino History: Dummy (i.e. no neutrinos)
+#
+# Using sparse 7836 x 7836 Jacbian with 145902 (0.24%) non-zero entries
+#
+# Options:
+#                 max iterations per step = 10
+#                   max Y change per step = 1.000000E-01
+#      smallest Y used for dt calculation = 1.000000E-06
+#                   convergence criterion = mass conservation
+#   smallest Y used for error calculation = 1.000000E-20
+#                   delta Y / Y threshold = 1.000000E-10
+#                mass deviation threshold = 1.000000E-10
+#                max dt change multiplier = 2.000000E+00
+#           density time scale multiplier = 1.000000E-02
+#                                  min dt = 1.000000E-16
+#                                  max dt = 1.000000E+16
+# max fractional change in T9 and entropy = 1.000000E-02
+#        min T9 for T9 and S change limit = 1.000000E+00
+#                         is self-heating = true
+#                               screening = true
+#                    min T9 for screening = 1.000000E-04
+# smallest Y used for entropy calculation = 1.000000E-20
+#                   rate exp argument cap = 1.000000E+02
+#             min T9 for strong reactions = 1.000000E-02
+#           min T9 for neutrino reactions = 1.000000E-03
+#                     min density for EOS = 1.000000E-08
+#               stdout output is disabled = false
+#            partition function log10 cap = 1.000000E+02
+#                min T9 for NSE evolution = 7.000000E+00
+#   NSE evolution start time scale factor = 5.000000E+00
+#             max error for NSE evolution = 1.000000E-08
+#             min error for NSE evolution = 1.000000E-10
+# max frac chng in T9, s for small dt NSE = 5.000000E-01
+#  num of stuck steps for renormalization = 25
+#
+# Column descriptions:
+#
+# [ 1] = step number
+# [ 2] = time [s]
+# [ 3] = dt [s]
+# [ 4] = nuclide that limits dt (or other dt limit reason)
+# [ 5] = number of failed time step attempts
+# [ 6] = number of Newton-Raphson iterations in successful time step
+# [ 7] = Temperature [GK]
+# [ 8] = Density [g cm^{-3}]
+# [ 9] = Ye
+# [10] = deviation from total mass = 1
+# [11] = mass fraction of n
+# [12] = mass fraction of p
+#
+# [2022-03-21 @ 01:27:12 PM]
+# Starting evolution, end time = 1.000E+00
+#
+# num    time [s]      dt [s] limit #fl #NR   temp [GK]   rho [cgs]          Ye    mass - 1        X(n)        X(p)
+    1  0.0000e+00  0.0000e+00  none   0   0  6.0000e+00  4.8657e+07  1.0000e-01 -3.3307e-16  7.3389e-01  1.2535e-09
+# Renormalizing mass (time step too small)

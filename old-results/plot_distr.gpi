@@ -1,0 +1,41 @@
+set style line 1 lw 6 dt "__"           lc "#FB8C00" pt 2
+set style line 2 lw 6 dt (38,4,8,4)     lc "#AB47BC" pt 8
+set style line 3 lw 6 dt (30,4,8,4,8,4) lc "#26A69A" pt 6
+set style line 4 lw 6 dt 1              lc "#424242" pt 12
+set style line 5 lw 8 dt 3 lc "gray50"
+
+set pointsize 2
+
+set term pdfcairo size 24,12 font ',64'
+set border 3
+set tics nomirror
+set format y "10^{%L}"
+set log y
+set ylabel "Y"
+set xlabel "A"
+set xtics 20
+set output "distr4.pdf"
+set key left top
+#unset key
+
+#set multiplot
+set yrange [1e-12:]
+plot [60:220] "frdm/final_abundance.txt" w l ls 1 t "FRDM2012", \
+              "hfb/final_abundance.txt" w l ls 2  t "HFB-24", \
+              "ws4/final_abundance.txt" w l ls 3 t "WS+RBF", \
+              "lmr2021/final_abundance.txt" w l ls 4 t "LMR"
+
+
+#set origin .5, .12
+#set size .5,.5
+#unset yrange
+#set border 31
+#set label font ",52"
+#unset ylabel
+#unset xlabel
+#unset ytics
+#set format x " "
+#set title "Распр. в Солн. сист." offset 0,-1
+#plot [60:220] "abund.txt" w l lc "#424242" lw 4 not
+
+#unset multiplot
